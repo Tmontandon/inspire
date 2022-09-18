@@ -1,0 +1,22 @@
+/* BASIC STYLES HERE */
+
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.text-shadow {
+  color: aliceblue;
+  text-shadow: 1px 1px black, 0px 0px 5px rgba(255, 244, 243, 0.719);
+  font-weight: bold;
+  letter-spacing: 0.08rem;
+}
+
+.glass {
+  background-color: rgba(14, 13, 13, 0.642);
+}
+
+header {
+  min-height: 23vh;
+}

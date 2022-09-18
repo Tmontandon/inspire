@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.0.96/css/materialdesignicons.min.css"
+    integrity="sha512-fXnjLwoVZ01NUqS/7G5kAnhXNXat6v7e3M9PhoMHOTARUMCaf5qNO84r5x9AFf5HDzm3rEZD8sb/n6dZ19SzFA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/style/main.css">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <title>Inspire</title>
+</head>
+
+<body class="bg-dark text-light">
+  <!-- SECTION Copywrite and Weather -->
+  <header>
+    <section class="container-fluid p-3">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-between">
+          <!-- STUB [COPYWRITE] -->
+          <div id="author">
+            <h6></h6>
+          </div>
+          <!-- STUB [WEATHER] -->
+          <!-- NOTE onclick -->
+          <div id="weather-content">
+            <!-- <div class="me-4 text-center selectable p-2 glass rounded no-select" onclick="">
+              <div></div>
+              <div></div>
+              <img src="https://openweathermap.org/img/wn/01n.png" alt="loading..."> -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+  <!-- SECTION Time and ToDo Offcanvas-->
+  <main class="">
+    <section class="container-fluid  ">
+      <div class="row justify-content-end">
+        <!-- STUB [TIME] -->
+        <div class="col-12 text-center p-4 mb-2 mt-5 text-shadow">
+          <h1 id="time"> </h1>
+        </div>
+        <!-- STUB [OFFCANVAS] -->
+        <div class=" col-12">
+          <button class="btn text-light glass" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+            <i class="mdi mdi-book fs-4"></i>
+          </button>
+        </div>
+        <div style="min-height: 5vh;">
+          <div class="collapse collapse-horizontal" id="collapseWidthExample">
+            <div class="card card-body glass elevation-2 mt-1" style="width: 38vh;">
+              <div class="row">
+                <div class="d-flex justify-content-between">
+                  <div class=" ">ToDo</div>
+                  <!-- NOTE Make however many are left -->
+                  <div class="text-end">
+                    <span id="todos-left"></span>
+                    <span>Left</span>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between flex-column" id="todo-list">
+                  <div class="mt-2 p-1 w-100 bg-light Iamsomad rounded">
+                    <!-- NOTE Make onchange do an put request, edit how many are left -->
+                    <input onchange="" class="ms-2" type="checkbox">
+                    <i onclick="" class="mdi mdi-close text-danger selectable rounded" title="Remove"></i>
+                    <span class="text-dark"></span>
+                  </div>
+                </div>
+                <!-- NOTE submit does a post request -->
+                <form onsubmit="app.todosController.makeTodo()" class="py-2">
+                  <div class="form-group d-flex justify-content-center p-1">
+                    <input class="form-control square-right" type="text" name="description" placeholder="Add ToDo"
+                      required />
+                    <label for="description" class="visually-hidden"></label>
+                    <button class="btn btn-dark square-left" type="submit"><i class="mdi mdi-plus"></i></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- SECTION Quote and Author -->
+  <footer class="mb-5">
+    <section class="container">
+      <div class="row justify-content-center">
+        <div class="col-8 text-center text-shadow" id="quote-content">
+          <!-- STUB [AUTHOR] -->
+          <h5 class="on-hover "></h5>
+          <!-- STUB [QUOTE] -->
+          <h2></h2>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js'
+    integrity='sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=='
+    crossorigin='anonymous' referrerpolicy='no-referrer'></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
+    integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
+  <script src="app/App.js" type="module"></script>
+</body>
+
+</html>
